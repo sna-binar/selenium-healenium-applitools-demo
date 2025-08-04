@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +33,9 @@ public class SaucedemoLoginCheckout {
         driver.findElement(By.id("continue")).click();
 
         driver.findElement(By.id("finish")).click();
+        String thankYouText = driver.findElement(By.cssSelector("h2.complete-header")).getText();
+        Assert.assertEquals("Thank you for your order!", thankYouText);
+        driver.findElement(By.id("back-to-products")).isDisplayed();
 
         driver.quit();
     }
