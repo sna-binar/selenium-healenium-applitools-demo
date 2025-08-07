@@ -17,7 +17,7 @@ public class VisualTestSaucedemoWithHiddenCheckoutButton {
         driver.get("https://www.saucedemo.com/");
 
         Eyes eyes = new Eyes();
-        eyes.setApiKey("jzKg2Ck81vWPcWzFwWO6jA097kZnj6n7AkQJgLXLVjM110");
+        eyes.setApiKey(""); //isi dengan API key Applitools kamu
 
         try {
             eyes.open(driver, "Saucedemo", "Cart Visual Test");
